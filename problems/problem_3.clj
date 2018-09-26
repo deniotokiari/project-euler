@@ -18,7 +18,7 @@
 (let [n 600851475143]
   (apply max 
     (filter #(and (zero? (mod n %)) (prime? %)) 
-      (reverse (sort (range 2 (inc (int (Math/floor (Math/sqrt n)))))))
+      (range 2 (inc (int (Math/floor (Math/sqrt n)))))
     )
   )
 )
