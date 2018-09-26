@@ -9,5 +9,5 @@
 )
 
 (let [start 1 end 20]
-  (first (drop-while #(not (evenly-divisible? % start end)) (drop end (range))))
+  (first (filter #(evenly-divisible? % start end) (drop end (range))))
 )
